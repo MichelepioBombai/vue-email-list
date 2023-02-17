@@ -13,6 +13,7 @@ const app = Vue.createApp({
   data() {
     return {
       emails: [],
+      emailsGenerated: false,
     };
   },
   methods: {
@@ -23,6 +24,10 @@ const app = Vue.createApp({
           .then((response) => {
             this.emails.push(response.data.response);
             console.log(response.data.response);
+
+            if (this.emails.length == 10) {
+              this.emailsGenerated = true;
+            }
           });
       }
     },

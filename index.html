@@ -35,10 +35,12 @@
   </head>
   <body>
     <div id="app">
-      <div class="btn btn-primary" @click="emailList()">genera Email</div>
-      <ul>
-        <li v-for="email in emails">{{email}}</li>
-      </ul>
+      <div class="container">
+        <div class="btn btn-primary" @click="emailList()">genera Email</div>
+        <ul v-if="emailsGenerated">
+          <li v-for="email in emails">{{email}}</li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>

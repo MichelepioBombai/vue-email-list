@@ -37,7 +37,7 @@
     <div id="app">
       <div class="btn btn-primary" @click="emailList()">genera Email</div>
       <ul>
-        <li>{{email.response}}</li>
+        <li v-for="email in emails">{{email}}</li>
       </ul>
     </div>
   </body>
